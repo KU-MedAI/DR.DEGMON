@@ -1,4 +1,4 @@
-*40# DR.DEGMON
+#DR.DEGMON
 DR.DEGMON: Self-explainable deep neural network for drug-induced cell viability prediction incorporating differentially expressed genes and Gene Ontology
 
 
@@ -6,5 +6,6 @@ DR.DEGMON: Self-explainable deep neural network for drug-induced cell viability 
 
 #Requirements
 
-Tensorflow == 2.12.1
-Keras == 2.12.0
+Tensorflow == 2.12.1  
+Keras == 2.12.0  
+

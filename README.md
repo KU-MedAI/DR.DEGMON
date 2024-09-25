@@ -25,7 +25,7 @@ For this purpose, we provide three matrix files:
 3. A matrix containing the connection information between DEGs (used as input) and GO terms at specific levels.
 
 Depending on which levels of GO terms to use and the acquired DEG data, genes must be selected to construct the genes-GO term connection information.
-*The data for step 2 was provided by Deep GoNet.*
+*The data for step 2 was provided by Deep GoNet. (Bourgeais, V., Zehraoui, F., Ben Hamdoune, M., & Hanczar, B. (2021). Deep GONet: Self-explainable deep neural network based on Gene Ontology for phenotype prediction from gene expression data. BMC Bioinformatics, 22(10), 455. https://doi.org/10.1186/s12859-021-04370-7)*
 
 # Conclusion
 DR.DEGMON constructed incorporates L2 regularization during training, applying prior biological knowledge to the deep learning model. The recommended lambda value for the L2 regularization is 0.0001, but users can adjust it to find the optimal value.

@@ -24,7 +24,7 @@ For this purpose, we provide three matrix files:
 2. A matrix representing the levels of each GO term.
 3. A matrix containing the connection information between DEGs (used as input) and GO terms at specific levels.
 
-https://url.kr/pddjih
+[Connection Data](https://zenodo.org/records/13837156?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjFjMjI0NDM2LWMyNTAtNGQ3MC1hNDYzLTBmMWZhY2UzYmFmZSIsImRhdGEiOnt9LCJyYW5kb20iOiIxMTI2MTBiNmNlOTNhZjczNGNlYmQxNTA5YWY4YjM4NSJ9.8TuFSUY4WQWMl5srNh0SEk-VyM9iuWY4v9UMu20C7Pe773YDoX9qfPJ757KXE0R8hBpC35AsxlaV7A4UY518Gw)
 
 Depending on which levels of GO terms to use and the acquired DEG data, genes must be selected to construct the genes-GO term connection information.
 

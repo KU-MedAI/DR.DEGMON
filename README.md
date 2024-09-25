@@ -12,7 +12,7 @@ Accurate cancer drug response prediction is essential for advancing cancer treat
 Tensorflow == 2.12.1  
 Keras == 2.12.0  
 
-#Data Preparing
+# Data Preparing
 You need to prepare two steps of data:
 
 Step 1. A dataset that matches DEGs with drug response data. In this study, the L1000 level5 data ((https://clue.io/) and CTRP data (https://portals.broadinstitute.org/ctrp.v2.1/) were matched, and this process can be found in the paper. Ultimately, this serves as the input data for the model, where DEGs are the inputs and cell viability is the output. In addition to CTRP, various drug response databases such as GDSC, PRISM, and NCI60 can be used to build datasets.
@@ -27,10 +27,10 @@ For this purpose, we provide three matrix files:
 Depending on which levels of GO terms to use and the acquired DEG data, genes must be selected to construct the genes-GO term connection information.
 *The data for step 2 was provided by Deep GoNet.
 
-#Conclusion
+# Conclusion
 DR.DEGMON constructed incorporates L2 regularization during training, applying prior biological knowledge to the deep learning model. The recommended lambda value for the L2 regularization is 0.0001, but users can adjust it to find the optimal value.
 
 In this study, the model was analyzed using layer-wise relevance propagation, and the results can be found in the paper's Results section. As this model incorporates prior biological knowledge, it provides more meaningful insights into model interpretation, which can be used to elucidate the mechanism of action (MoA) of compounds or to discover biomarkers.
 
-#Contact
+# Contact
 If you have any question regard our study, please contact me (wtlim@korea.ac.kr)

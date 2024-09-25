@@ -15,7 +15,7 @@ Keras == 2.12.0
 # Data Preparing
 You need to prepare two steps of data:
 
-**Step 1**. A dataset that matches DEGs with drug response data. In this study, the L1000 level5 data ((https://clue.io/) and CTRP data (https://portals.broadinstitute.org/ctrp.v2.1/) were matched, and this process can be found in the paper. Ultimately, this serves as the input data for the model, where DEGs are the inputs and cell viability is the output. In addition to CTRP, various drug response databases such as GDSC, PRISM, and NCI60 can be used to build datasets.
+**Step 1**. A dataset that matches DEGs with drug response data. In this study, the L1000 level5 data (https://clue.io/) and CTRP data (https://portals.broadinstitute.org/ctrp.v2.1/) were matched, and this process can be found in the paper. Ultimately, this serves as the input data for the model, where DEGs are the inputs and cell viability is the output. In addition to CTRP, various drug response databases such as GDSC, PRISM, and NCI60 can be used to build datasets.
 
 **Step 2**. A matrix containing the connection information of GO terms. This determines the MLP structure of the model and also influences the L2 regularization of the loss function. This matrix contains connection information between GO terms at different levels, based on the input data (genes), and it is used to define the structure of the MLP.
 

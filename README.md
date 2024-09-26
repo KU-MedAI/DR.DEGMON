@@ -27,7 +27,7 @@ The above two matrices will be processed and used according to the GO term level
 
 3. A matrix that provides the connectivity information between genes and GO terms. The gene list in the matrix must be matched with the gene list contained in the input DEGs. (Full genes version & selected genes version are both uploaded) 
 
-They are used to design the architecture of the DR.DEGMON. 
+These determine the layers and structure of DR.DEGMON.
 
 [Connection Data](https://zenodo.org/records/13837156?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjFjMjI0NDM2LWMyNTAtNGQ3MC1hNDYzLTBmMWZhY2UzYmFmZSIsImRhdGEiOnt9LCJyYW5kb20iOiIxMTI2MTBiNmNlOTNhZjczNGNlYmQxNTA5YWY4YjM4NSJ9.8TuFSUY4WQWMl5srNh0SEk-VyM9iuWY4v9UMu20C7Pe773YDoX9qfPJ757KXE0R8hBpC35AsxlaV7A4UY518Gw)
 

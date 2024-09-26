@@ -22,6 +22,7 @@ You need to prepare two steps of data:
 For this purpose, we provide three matrix files:
 1. A matrix that provides the connectivity information between GO terms. 
 2. A matrix that provides information about the level each GO term belongs to.
+
 The above two matrices will be processed and used according to the GO term levels you want to use.
 
 3. A matrix that provides the connectivity information between genes and GO terms. The gene list in the matrix must be matched with the gene list contained in the input DEGs. (Full genes version & selected genes version are both uploaded) 

@@ -38,7 +38,7 @@ DR.DEGMON constructed incorporates L2 regularization during training, applying p
 In this study, the model was analyzed using layer-wise relevance propagation, and the results can be found in the paper's Results section. As this model incorporates prior biological knowledge, it provides more meaningful insights into model interpretation, which can be used to elucidate the MoA of compounds or to discover biomarkers.
 
 # Contact
-If you have any question regard our study, please contact us (wtlim@korea.ac.kr)
+If you have any question regard our study, please contact us (mjjeon@korea.ac.kr)
 
 # Funding
 This work was supported by the National Research Foundation of Korea Grant (NRF2022R1F1A1070111) and MSIT (Ministry of Science and ICT), Korea, under the ICAN (ICT Challenge and Advanced Network of HRD) program (IITP-2024-RS2022-00156439, IITP-2024-RS-2024-00438263) supervised by the IITP (Institute of Information & Communications Technology Planning & Evaluation)

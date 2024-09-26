@@ -15,27 +15,30 @@ Keras == 2.12.0
 # Data Preparing
 You need to prepare two steps of data:
 
-**Step 1**. A dataset that matches DEGs with drug response data. In this study, the L1000 level5 data (https://clue.io/) and CTRP data (https://portals.broadinstitute.org/ctrp.v2.1/) were matched, and this process can be found in the paper. Ultimately, this serves as the input data for the model, where DEGs are the inputs and cell viability is the output. In addition to CTRP, various drug response databases such as GDSC, PRISM, and NCI60 can be used to build datasets.
+**Step 1**. Create a dataset that matches DEGs with drug response data. In this study, the L1000 level5 data (https://clue.io/)was matched with CTRP data (https://portals.broadinstitute.org/ctrp.v2.1/). The detailed process can be found in the  paper. This dataset serves as the input data for the model, where DEGs are the input features and cell viability is the output value. While this study mainly utilized CTRP, other drug response databases such as GDSC, PRISM, and NCI60 can also be used to construct similar datasets.
 
-**Step 2**. A matrix containing the connection information of GO terms. This determines the MLP structure of the model and also influences the L2 regularization of the loss function. This matrix contains connection information between GO terms at different levels, based on the input data (genes), and it is used to define the structure of the MLP.
+**Step 2**. Download matrices containing the connectivity information of GO terms. 
 
 For this purpose, we provide three matrix files:
-1. A matrix containing the connection information between GO terms.
-2. A matrix representing the levels of each GO term.
-3. A matrix containing the connection information between DEGs (used as input) and GO terms at specific levels.
+1. A matrix that provides the connectivity information between GO terms. 
+2. A matrix that provides information about the level each GO term belongs to.
+The above two matrices will be processed and used according to the GO term levels you want to use.
+
+3. A matrix that provides the connectivity information between genes and GO terms. The gene list in the matrix must be matched with the gene list contained in the input DEGs. (Full genes version & selected genes version are both uploaded) 
+
+They are used to design the architecture of the DR.DEGMON. 
 
 [Connection Data](https://zenodo.org/records/13837156?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjFjMjI0NDM2LWMyNTAtNGQ3MC1hNDYzLTBmMWZhY2UzYmFmZSIsImRhdGEiOnt9LCJyYW5kb20iOiIxMTI2MTBiNmNlOTNhZjczNGNlYmQxNTA5YWY4YjM4NSJ9.8TuFSUY4WQWMl5srNh0SEk-VyM9iuWY4v9UMu20C7Pe773YDoX9qfPJ757KXE0R8hBpC35AsxlaV7A4UY518Gw)
 
-Depending on which levels of GO terms to use and the acquired DEG data, genes must be selected to construct the genes-GO term connection information.
 
-*The data for step 2 was provided by Deep GoNet. (Bourgeais, V., Zehraoui, F., Ben Hamdoune, M., & Hanczar, B. (2021). Deep GONet: Self-explainable deep neural network based on Gene Ontology for phenotype prediction from gene expression data. BMC Bioinformatics, 22(10), 455. https://doi.org/10.1186/s12859-021-04370-7)*
+*The data for step 2 was originally provided by Deep GoNet. (Bourgeais, V., Zehraoui, F., Ben Hamdoune, M., & Hanczar, B. (2021). Deep GONet: Self-explainable deep neural network based on Gene Ontology for phenotype prediction from gene expression data. BMC Bioinformatics, 22(10), 455. https://doi.org/10.1186/s12859-021-04370-7)*
 
 # Usage
 The manuscript for DR.DEGMON can be found DR.DEGMON.ipynb
 
-DR.DEGMON constructed incorporates L2 regularization during training, applying prior biological knowledge to the deep learning model. The recommended lambda value for the L2 regularization is 0.0001, but users can adjust it to find the optimal value.
+DR.DEGMON incorporates L2 regularization during training, applying prior biological knowledge to the deep learning model. The recommended lambda value for the L2 regularization is 0.0001, but users can adjust it to find the optimal value.
 
-In this study, the model was analyzed using layer-wise relevance propagation, and the results can be found in the paper's Results section. As this model incorporates prior biological knowledge, it provides more meaningful insights into model interpretation, which can be used to elucidate the MoA of compounds or to discover biomarkers.
+In this study, the model was analyzed using layer-wise relevance propagation, and the results can be found in the paper's Results section of the paper. As this model incorporates prior biological knowledge, it provides more meaningful insights into model interpretation, which can be used to elucidate the MoA of compounds or to discover biomarkers.
 
 # Contact
 If you have any question regard our study, please contact us (mjjeon@korea.ac.kr)

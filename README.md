@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/6e44d3ce-75ab-408a-a26a-a75453e4d663)# DR.DEGMON
+![image](https://github.com/user-attachments/assets/6e44d3ce-75ab-408a-a26a-a75453e4d663)
+
+# DR.DEGMON
 DR.DEGMON: Self-explainable deep neural network for drug-induced cell viability prediction incorporating differentially expressed genes and Gene Ontology
 
 

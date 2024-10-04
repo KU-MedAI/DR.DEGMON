@@ -18,21 +18,21 @@ Tensorflow == 2.12.1
 Keras == 2.12.0  
 
 # Data Preparing
-You need to prepare two steps of data:
+Data preparation consists of two steps:
 
-**Step 1**. Create a dataset that matches DEGs with drug response data. In this study, the L1000 level5 data (https://clue.io/) was matched with CTRP data (https://portals.broadinstitute.org/ctrp.v2.1/). The detailed process can be found in the  paper. This dataset serves as the input for the model, with DEGs as the input features and cell viability as the output value. While this study mainly utilized CTRP, other drug response databases such as GDSC, PRISM, and NCI60 can also be used to construct datasets.
+**Step 1**. Create a dataset matching DEGs with drug response data. In this study, the L1000 level5 data (https://clue.io/) was matched with CTRP data (https://portals.broadinstitute.org/ctrp.v2.1/). The detailed process can be found in the  paper. This dataset serves as input for the model, with DEGs as input features and cell viability as the output value. While this study mainly utilized CTRP, other drug response databases such as GDSC, PRISM, and NCI60 can also be used to construct datasets.
 
-**Step 2**. Download matrices containing the connectivity information of GO terms. 
+**Step 2**. Download matrices containing connectivity information of GO terms. 
 
 For this purpose, we provide three matrix files:
 1. A matrix that provides the connectivity information between GO terms. 
 2. A matrix that provides information about the level each GO term belongs to.
 
-The above two matrices will be processed and used according to the GO term levels you want to use.
+These two matrices will be processed and used based on the desired GO term levels.
 
-3. A matrix that provides the connectivity information between genes and GO terms. The gene list in the matrix must be matched with the gene list contained in the input DEGs. (Full genes version & selected genes version are both uploaded) 
+3. A matrix providing connectivity information between genes and GO terms. The gene list in this matrix must match the gene list in the input DEGs. (Full genes version & selected genes version are both uploaded) 
 
-These determine the layers and structure of DR.DEGMON.
+These matrices determine the layers and structure of DR.DEGMON.
 
 [Connection Data](https://zenodo.org/records/13837156?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjFjMjI0NDM2LWMyNTAtNGQ3MC1hNDYzLTBmMWZhY2UzYmFmZSIsImRhdGEiOnt9LCJyYW5kb20iOiIxMTI2MTBiNmNlOTNhZjczNGNlYmQxNTA5YWY4YjM4NSJ9.8TuFSUY4WQWMl5srNh0SEk-VyM9iuWY4v9UMu20C7Pe773YDoX9qfPJ757KXE0R8hBpC35AsxlaV7A4UY518Gw)
 
@@ -40,11 +40,11 @@ These determine the layers and structure of DR.DEGMON.
 *The data for step 2 was originally provided by Deep GoNet. (Bourgeais, V., Zehraoui, F., Ben Hamdoune, M., & Hanczar, B. (2021). Deep GONet: Self-explainable deep neural network based on Gene Ontology for phenotype prediction from gene expression data. BMC Bioinformatics, 22(10), 455. https://doi.org/10.1186/s12859-021-04370-7)*
 
 # Usage
-The manuscript for DR.DEGMON can be found in `DR.DEGMON.ipynb`
+The code for DR.DEGMON can be found in `DR.DEGMON.ipynb`
 
 DR.DEGMON incorporates L2 regularization during training, applying prior biological knowledge to the deep learning model. The recommended lambda value for the L2 regularization is 0.0001, but users can adjust it to find the optimal value.
 
-In this study, the model was analyzed using layer-wise relevance propagation, and the results can be found in the paper's Results section of the paper. As this model incorporates prior biological knowledge, it provides more meaningful insights into model interpretation, which can be used to elucidate the MoA of compounds or to discover biomarkers.
+In this study, the model was analyzed using layer-wise relevance propagation, and the results can be found in the paper's Results section of the paper. As this model incorporates prior biological knowledge, it provides more meaningful insights for model interpretation, which can be used to elucidate compound MoAs or discover biomarkers.
 
 # Contact
 If you have any question regard our study, please contact us (mjjeon@korea.ac.kr)
